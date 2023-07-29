@@ -2,7 +2,7 @@ E-commerce Project. It sells product as handbag. In my projcet, I have many page
 
 ### User Page:
  If you want to see out process you can log in with my testing account:
-> Email: testing23@gmail.com
+> Email: testing23@gmail.com 
 >  Password: 123
 
   - Sign In
@@ -29,7 +29,7 @@ E-commerce Project. It sells product as handbag. In my projcet, I have many page
 
   - Checkout Page
     
-+ Admin Page:
+### Admin Page:
   - Home Page
 
   - Products
