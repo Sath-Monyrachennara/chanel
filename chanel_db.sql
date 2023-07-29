@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 29, 2023 at 04:00 PM
+-- Generation Time: Jul 29, 2023 at 05:07 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -138,7 +138,8 @@ INSERT INTO `saysomething` (`id`, `user_id`, `name`, `email`, `number`, `message
 (2, 5, 'NARA Heng', 'nara12@gmail.com', '09875623', 'pop up song!', '2023-07-29'),
 (3, 1, 'Heng Nara', 'nara12@gmail.com', '09875623', 'Hello!!!', '2023-07-29'),
 (6, 1, 'NARA Heng', 'nara12@gmail.com', '09875623', 'Hello hi!!!', '2023-07-29'),
-(7, 1, '', '', '', '', '2023-07-29');
+(7, 1, '', '', '', '', '2023-07-29'),
+(8, 5, '', '', '', '', '2023-07-29');
 
 -- --------------------------------------------------------
 
@@ -165,7 +166,8 @@ INSERT INTO `users` (`id`, `user_id`, `email`, `first_name`, `last_name`, `passw
 (1, 1, 'reancode123@gamil.com', 'Nara', 'Sath', '123', 'user', '2022-07-05'),
 (2, 2, 'monyrasath44@gmail.com', 'Nara', 'Heng', '456', 'user', '2022-07-05'),
 (6, 6, 'reanGOGO123@gamil.com', 'GOGO', 'HO', '123', 'admin', '2022-07-06'),
-(7, 5, 'nara12@gmail.com', 'Nara', 'Heng', '12345', 'user', '2023-07-29');
+(7, 5, 'nara12@gmail.com', 'Nara', 'Heng', '12345', 'user', '2023-07-29'),
+(8, 5, 'testing23@gmail.com', 'Admin', 'Testing', '123', 'user', '2023-07-29');
 
 --
 -- Indexes for dumped tables
@@ -239,13 +241,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `saysomething`
 --
 ALTER TABLE `saysomething`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
