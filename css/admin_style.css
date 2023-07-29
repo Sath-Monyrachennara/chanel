@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(176, 174, 174);
+}
+
+/* Admin Header */
+.header {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 0 auto;
+    padding: 7px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar #logo {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar #logo span {
+    color: rgb(108, 14, 108);
+    margin-left: -8px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: .5rem;
+    letter-spacing: 1px;
+}
+
+.navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(108, 14, 108);
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    transition: 0.3 all ease;
+}
+
+.navbar .icons {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+.icons {
+    color: rgb(137, 136, 136);
+    margin: 0px 10px;
+}
+
+.icons #menu_btn {
+    display: none;
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+/* Show admin account when sign in */
+.header .show_userAcc {
+    border: 2px solid #929090;
+    border-radius: 10px;
+    background-color: snow;
+    box-shadow: 0px 0px 5px rgb(147, 146, 146);
+    width: 420px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 0px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    display: none;
+}
+
+.header .show_userAcc.active {
+    display: block;
+}
+
+.header .show_userAcc p {
+    color: black;
+    font-size: 20px;
+    margin-left: 5px; 
+    line-height: 5px;
+    display: inline-flex;
+}
+
+.header .show_userAcc p span {
+    color: #53287c;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+}
+
+.show_userAcc .logout_btn {
+    margin-top: 25px;
+}
+
+.show_userAcc .logout_btn a {
+    text-decoration: none;
+    color: snow;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: rgb(131, 51, 131);
+    padding: 10px 40px;
+}
+
+.show_userAcc .logout_btn a:hover {
+    background-color: rgb(141, 75, 141);
+    color: black;
+    transition: 0.3 all ease;
+}
+
+.show_userAcc .showLogRe {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin: 20px 0px 10px;
+}
+
+.show_userAcc .showLogRe a {
+    color: rgb(131, 51, 131);
+    text-decoration: none;
+}
+/*
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+}   
+    */
+
+/* Dashboard */
+.dashboard {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 30px;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 2rem;
+    text-align: center;
+    color: #1d1d1d;
+    font-weight: 600;
+    margin: 140px auto 10px;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 400px;
+    margin: 5px 0px;
+}
+
+.box-container .box {
+    border: 2px solid #555555;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin: 20px 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.box h3 {
+    color: #1d1d1d;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+    line-height: 20px;
+}
+
+.box p {
+    color: rgb(108, 14, 108);
+    font-size: 18px;
+    border: 2px solid rgb(158, 157, 157);
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 250px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Products */
+.products {
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+    margin-left: -35px;
+}
+
+.addProducts {
+    margin: 30px 326px 0px;
+    border: 2px solid #605e5e;
+    width: 58%;
+    height: auto;
+    border-radius: 10px;
+  /*  position: relative; */
+}
+
+.products h1, .addProducts h2 {
+    font-family: inherit;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+}
+
+.addProducts h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.addProducts form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 75px;
+    position: relative;
+}
+
+form .pro_col {
+    text-align: center;  
+    padding: 0px 60px;
+}
+
+.col2 {
+    margin-left: -90px;
+}
+
+.addProducts form input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 2px solid rgb(165, 164, 164);
+    border-radius: 5px;
+    width: 370px;
+    margin-bottom: 20px;
+}
+
+.addProducts form label {
+    display: block;
+    margin-left: -250px;
+    margin-top: -10px;
+    color: rgb(69, 68, 68);
+    margin-bottom: 15px;
+}
+
+.updateDetailImg {
+    display: flex;
+    flex-direction: row;
+}
+
+#proDetail_img_lable {
+    margin-left: -200px;
+}
+
+#proDetail_img {
+    width: 70%;
+}
+
+#updateImg_btn {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 12px;
+    color: snow;
+    padding: 5px 5px;
+    border: 1px solid black;
+    background-color: rgb(223, 92, 77);
+    border-radius: 3px;
+    cursor: pointer;
+    height: 50%;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    margin-right: -30px;
+    margin-top: 5px;
+}
+
+.addProduct_btn {
+    color: snow;
+    border: none;
+    background-color: rgb(131, 51, 131);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    padding: 6px 0px;
+    text-align: center;
+    width: 175px;
+    top: 220px;
+    left: 20px;
+    position: absolute;
+}
+
+.addProduct_btn:hover {
+    background-color: rgb(141, 75, 141);
+    color: black;
+    transition: 0.3 all ease;
+}
+
+.showPro {
+    margin: 120px 100px 100px;
+}
+
+.showPro .Pro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.showPro .pro_item {
+    width: 25%;
+    height: auto;
+    border: 2px solid #696868;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.pro_item img {
+    width: 60%;
+    height: 60%;
+    opacity: 1;
+}
+
+.pro_item .name {
+    font-size: 20px;
+    font-family: inherit;
+    color: #1D1D1D;
+    margin-top: -10px;
+}
+
+.pro_item .price {
+    font-family: inherit;
+    color: #1D1D1D;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: -5px;
+}
+
+.update_btn, .delete_btn {
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: rgb(163, 59, 93);
+    color: snow;
+    padding: 7px 35px;
+    border-radius: 3px;
+    margin: 5px 1px 25px;
+    cursor: pointer;
+}
+
+.delete_btn {
+    background-color: #616161;
+}
+
+.update_btn:hover {
+    background-color: rgb(163, 72, 102);
+    color: black;
+    font-weight: 500;
+}
+
+.delete_btn:hover {
+    background-color: #5a5a5a;
+    color: black;
+    font-weight: 500;
+}
+
+.pro_item .exit i {
+    font-size: 22px;
+    position: absolute;
+    top: 5px;
+    padding-left: 5px;
+    transition: 0.3 all ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pro_item .exit i:hover {
+    color: rgb(163, 59, 93);
+    transition: all .3 ease;
+}
+
+/* Orders */
+.orders {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+
+.showOrder .result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 30px 20px 15px;
+}
+
+.showResult {
+    width: 360px;
+    border: 2px solid #8d8b8b;
+    border-radius: 5px;
+    padding: 15px 10px 20px;
+    margin-left: 30px;
+}
+
+.showResult p {
+    color: #333333;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: .5rem;
+    margin-bottom: -10px;
+    line-height: 30px;
+   
+} 
+
+.showResult p span {
+    color: #53287c; 
+    font-weight: 400;
+    cursor: pointer;
+}
+  
+.orders form {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.orders form select {
+    border: 2px solid #b3b3b3;
+    border-radius: 10px;
+    padding: 5px 0px;
+    font-family: inherit;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    background-color: rgb(247, 234, 220);
+}
+
+.orders form a {
+    text-decoration: none;
+    margin: 5px 7px 15px;
+}
+
+    /* Users */
+.userAcc {
+    text-align: center;
+    margin: 70px 0px 150px;
+    margin-left: -10px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.show_acc .user_acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.show_acc .account {
+    width: 390px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.account .button {
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+
+.account .button button {
+    background-color: #636262;
+}
+
+    /* Messages */
+.message {
+    margin: 70px 0px 50px; 
+}
+
+.show_message {
+    margin: 30px 0px 50px; 
+    width: 100%;    
+    height: auto;
+}
+
+.show_message .showMess {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 30px; 
+}
+
+.show_message .showMess div {
+    width: 450px;
+    margin: 0 10px;
+}
+
+.mess button {
+    background-color: #636262;
+    margin-left: 7px;
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+
